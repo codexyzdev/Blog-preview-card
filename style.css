@@ -1,0 +1,121 @@
+:root {
+  /* ### Primary */
+  --Yellow: hsl(47, 88%, 63%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+  src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Yellow);
+  font-family: "Figtree";
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.card {
+  max-width: 375px;
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--Black);
+  box-shadow: 8px 8px;
+}
+.card__img {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+.card__status {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--Yellow);
+  color: var(--Black);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.card__published {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card__title:hover {
+  color: var(--Yellow);
+  transition: color 0.3 ease-in-out;
+}
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.card__text {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.card__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  & img {
+    width: 45px;
+    height: 45px;
+  }
+  & p {
+    font-weight: 800;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    max-width: 327px;
+    padding: 1rem;
+  }
+  .card__status {
+    padding: 5px 7px;
+  }
+  .card__published {
+    font-size: 0.75rem;
+  }
+  .card__text {
+    line-height: 1.4;
+    font-size: 14px;
+  }
+  .card__user {
+    gap: 0.8rem;
+    & img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
